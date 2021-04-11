@@ -48,9 +48,13 @@ class Recorder(object):
         self.client.loop()
 
 
-if __name__ == "__main__":
+def main():
     recorder = Recorder(USERNAME, PASSWORD, HOST, PORT)
     recorder.subscribe([("mock/moisture", 2), ("mock/saturation", 2)])
     while True:
         recorder.run()
+
+
+if __name__ == "__main__":
+    main()
 
