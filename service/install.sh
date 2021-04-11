@@ -26,4 +26,4 @@ cp grow-recorder.service /etc/systemd/system/
 systemctl reenable grow-recorder.service
 systemctl start grow-recorder.service
 
-inform"\nSuccessfully installed grow-recorder as a systemd service.\n"
+inform "\nSuccessfully installed grow-recorder as a systemd service.\n"
