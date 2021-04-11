@@ -21,10 +21,9 @@ class Recorder(object):
             print("Connect returned result code: {}".format(rc))
 
     def on_message(self, client, userdata, msg):
-        topic = msg.topic
-        payload = msg.payload.decode("utf-8")
-        qos = msg.qos
-        print(f"Received message {topic} -> {payload} with QoS {qos}")
+        topic = msg.topic.split("/")[-1]
+        payload = msg.payload
+        print(f"Received message {topic} -> {payload}")
 
     def subscribe(self, topics):
         result, message_id = self.client.subscribe(topics)
