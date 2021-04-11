@@ -4,6 +4,7 @@ After=multi-user.target
 
 [Service]
 Type=simple
+User=
 WorkingDirectory=
 ExecStart=
 Restart=on-failure
