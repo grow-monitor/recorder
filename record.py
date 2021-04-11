@@ -23,7 +23,7 @@ class Recorder(object):
     def on_message(self, client, userdata, msg):
         topic = msg.topic
         payload = msg.payload.decode("utf-8")
-        qos = msg.qos.decode("utf-8")
+        qos = msg.qos
         print(f"Received message {topic} -> {payload} with QoS {qos}")
 
     def subscribe(self, topics):
