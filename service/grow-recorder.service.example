@@ -1,0 +1,14 @@
+[Unit]
+Description=Record sensor data from an MQTT Broker to a PostgreSQL database
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=
+ExecStart=
+Restart=on-failure
+StandardOutput=syslog+console
+StandardError=syslog+console
+
+[Install]
+WantedBy=multi-user.target
