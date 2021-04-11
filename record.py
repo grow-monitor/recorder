@@ -37,7 +37,7 @@ class Recorder(object):
 
     def insert(self, data):
         cur = self.conn.cursor()
-        query = f"INSERT INTO {TABLE} (timestamp, topic, value) VALUES (?, ?, ?);"
+        query = f"INSERT INTO {TABLE} (timestamp, topic, value) VALUES (%s, %s, %s);"
         try:
             cur.execute(query, data)
         except (Exception, psycopg2.Error) as err:
