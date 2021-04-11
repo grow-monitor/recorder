@@ -37,12 +37,18 @@ class Recorder(object):
 
     def insert(self, data):
         cur = self.conn.cursor()
-        query = f"INSERT INTO {TABLE} (timestamp, topic, value) VALUES (%s, %s, %s);"
+        # query = f"INSERT INTO {TABLE} (timestamp, topic, value) VALUES (%s, %s, %s);"
+        # try:
+        #     cur.execute(query, data)
+        # except (Exception, psycopg2.Error) as err:
+        #     print(f"Unable to insert data: {err}")
+        # self.conn.commit()
+        query = f"SELECT * FROM {TABLE};"
         try:
-            cur.execute(query, data)
+            cur.execute(query)
         except (Exception, psycopg2.Error) as err:
-            print(f"Unable to insert data: {err}")
-        self.conn.commit()
+            print(err)
+        print(cur.fetchall())
 
     def run(self):
         self.client.loop()
