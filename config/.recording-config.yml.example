@@ -1,0 +1,9 @@
+mqtt:
+  username:
+  password:
+  topics:
+    - my/topic
+    - another/topic
+fauna:
+  secret:
+  collection:
