@@ -1,9 +1,11 @@
 mqtt:
   username:
   password:
-  topics:
-    - my/topic
-    - another/topic
+  host:
+  port:
 fauna:
   secret:
   collection:
+topics:
+    - my/topic
+    - another/topic
