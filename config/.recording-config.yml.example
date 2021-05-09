@@ -5,7 +5,6 @@ mqtt:
   port:
 fauna:
   secret:
-  collection:
 topics:
     - my/topic
     - another/topic

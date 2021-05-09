@@ -1,5 +1,4 @@
 from src.config import (
-    FAUNA_COLLECTION,
     FAUNA_SECRET,
     MQTT_HOST,
     MQTT_PASSWORD,
@@ -13,7 +12,6 @@ from src.record import Recorder
 def run():
     recorder = Recorder(
         FAUNA_SECRET,
-        FAUNA_COLLECTION,
         username=MQTT_USERNAME,
         password=MQTT_PASSWORD,
         host=MQTT_HOST,

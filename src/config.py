@@ -26,9 +26,7 @@ def _get_config() -> dict:
 
 _config = _get_config()
 
-FAUNA_COLLECTION: str = _config["fauna"]["collection"]
 FAUNA_SECRET: str = _config["fauna"]["secret"]
-
 MQTT_USERNAME: str = _config["mqtt"]["username"]
 MQTT_PASSWORD: str = _config["mqtt"]["password"]
 MQTT_HOST: str = _config["mqtt"]["host"]
